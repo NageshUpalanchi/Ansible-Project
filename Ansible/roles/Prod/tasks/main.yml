@@ -1,0 +1,2 @@
+- name: "Installing nginx on slave2"
+  include_tasks: install-mysql.yml

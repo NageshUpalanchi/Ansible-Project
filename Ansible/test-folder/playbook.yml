@@ -1,0 +1,17 @@
+- name: "Installing java"
+  hosts: app
+  become: yes
+  tasks:
+   - name: "Install java"
+     apt:
+       name: openjdk-11-jdk
+       state: present
+
+- name: "Installing mysql server"
+  hosts: db
+  become: yes
+  tasks:
+   - name: "install mysql-server"
+     apt:
+        name: mysql-server
+        state: present

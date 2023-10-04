@@ -1,0 +1,16 @@
+- name: "Installing Nginx server on Slave2"
+  apt:
+    name: nginx
+    state: present
+
+- name: "Deleting file from slave"
+  file:
+    path: /var/www/html/index.nginx-debian.html
+    state: absent
+
+- name: "Copying index.html file from master to slave1."
+  copy:
+    src: /home/nagesh/roles/nginx/files/index.html
+    dest: /var/www/html/index.html
+      #  when: "'nginx' in inventory_hostname"
+

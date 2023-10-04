@@ -1,0 +1,16 @@
+- name: "Create 1.txt file"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Creating file"
+      file:
+        path: /tmp/1.txt
+        state: touch
+- name: "Adding text to 1.txt file"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "Adding content"
+      lineinfile:
+        path: /tmp/1.txt
+        line: "This text has been added by custom script"

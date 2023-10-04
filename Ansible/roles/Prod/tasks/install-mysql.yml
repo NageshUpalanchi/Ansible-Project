@@ -1,0 +1,4 @@
+- name: "Installing Nginx server on Slave2"
+  apt:
+    name: mysql-server
+    state: present

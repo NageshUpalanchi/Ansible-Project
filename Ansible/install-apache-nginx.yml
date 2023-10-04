@@ -1,0 +1,12 @@
+- name: "Installing java on Test nodes"
+  hosts: Test
+  become: yes
+  roles:
+    - Test
+
+
+- name: "Installing mysql on Prod nodes"
+  hosts: Prod
+  become: yes
+  roles:
+    - Prod

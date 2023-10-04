@@ -1,0 +1,4 @@
+- name: "Installing Apache2 on Slave1"
+  apt:
+    name: openjdk-11-jdk
+    state: present
